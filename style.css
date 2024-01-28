@@ -23,9 +23,7 @@ img{
     align-items: center;
     gap: 3rem;
 }
-p{
-    text-align: center;
-}
+
 
 .choise:hover{
     opacity: 0.5;
@@ -34,15 +32,23 @@ p{
 .score-board{
     display: flex;
     justify-content: center ;
+    align-items: center;
     font-size: 2rem;
-    gap: 3rem;
-    margin-top: 2rem;
+    gap: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.msg-container{
-    font-size: 3rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ #msg{
+    font-size: 2rem;
+   /*font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     background-color: coral;
     color: black;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 5rem;
 }
