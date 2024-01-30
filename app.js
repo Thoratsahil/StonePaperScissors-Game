@@ -5,7 +5,8 @@ const choises =document.querySelectorAll(".choise");
 const msg=document.querySelector("#msg");
 
 
-
+const userscorepara=document.querySelector("#uscore");
+const compscorepara=document.querySelector("#cscore");
 
 
 const drawgame = () =>{
@@ -16,12 +17,14 @@ const drawgame = () =>{
 
 const showwin= (userwin,userchoise,compchoise) =>{
     if(userwin){
-         
+        userscr++;
+        userscorepara.innerText=userscr;
         console.log("You Win");
         msg.innerText=`You Win...${userchoise} Beats ${compchoise}`;
         msg.style.backgroundColor = "Green";
     } else {
-        
+        compscr++;
+        compscorepara.innerText=compscr;
         console.log("You Lose");
         msg.innerText=`You Lose...${compchoise} Beats ${userchoise}`;;
         msg.style.backgroundColor = "red";
