@@ -2,6 +2,10 @@ let userscr=0;
 let compscr=0;
 
 const choises =document.querySelectorAll(".choise");
+const msg=document.querySelector("#msg");
+
+
+
 
 
 const drawgame = () =>{
@@ -10,16 +14,17 @@ const drawgame = () =>{
 }
 
 
-const msg=document.querySelector("#msg");
-
-
-const showwin= (userwin) =>{
+const showwin= (userwin,userchoise,compchoise) =>{
     if(userwin){
+         
         console.log("You Win");
-        msg.innerText="You Win";
+        msg.innerText=`You Win...${userchoise} Beats ${compchoise}`;
+        msg.style.backgroundColor = "Green";
     } else {
+        
         console.log("You Lose");
-        msg.innerText="You Lose";
+        msg.innerText=`You Lose...${compchoise} Beats ${userchoise}`;;
+        msg.style.backgroundColor = "red";
     }
 }
 
@@ -58,7 +63,7 @@ const playgame= (userchoise) => {   //arrowfunction
             userwin=compchoise=== "rock"?false:true;
         }
 
-        showwin(userwin);
+        showwin(userwin,userchoise,compchoise);
     }
     
 
