@@ -1,21 +1,21 @@
-let userscr=0;
+let userscr=0; //for increaseing score board
 let compscr=0;
 
-const choises =document.querySelectorAll(".choise");
-const msg=document.querySelector("#msg");
+const choises =document.querySelectorAll(".choise"); //for access divchoices
+const msg=document.querySelector("#msg"); 
 
 
-const userscorepara=document.querySelector("#uscore");
+const userscorepara=document.querySelector("#uscore"); //score board
 const compscorepara=document.querySelector("#cscore");
 
 
 const drawgame = () =>{
     console.log("Game Was draw");
-    msg.innerText="Game Draw...Please Try Again";
+    msg.innerText="Game Draw...Please Try Again"; //draw game function
 }
 
 
-const showwin= (userwin,userchoise,compchoise) =>{
+const showwin= (userwin,userchoise,compchoise) =>{ //userwin or compwin display
     if(userwin){
         userscr++;
         userscorepara.innerText=userscr;
@@ -35,7 +35,7 @@ const showwin= (userwin,userchoise,compchoise) =>{
 const gencompchoise= () => {
 
     const options=["rock","paper","scissors"];
-    const randindx=Math.floor(Math.random() * 3);
+    const randindx=Math.floor(Math.random() * 3); //compchoise from mathRandom()
 
     return options[randindx];
 }
@@ -74,7 +74,7 @@ const playgame= (userchoise) => {   //arrowfunction
 
  choises.forEach((choise) => {
 
-    choise.addEventListener("click", () => {
+    choise.addEventListener("click", () => { //event listener
 
         const userchoise= choise.getAttribute("id");
         //console.log("Choise was clicked",userchoise);
