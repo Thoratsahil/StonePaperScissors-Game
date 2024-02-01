@@ -20,7 +20,7 @@ const showwin= (userwin,userchoise,compchoise) =>{ //userwin or compwin display
         userscr++;
         userscorepara.innerText=userscr;
         console.log("You Win");
-        msg.innerText=`You Win...${userchoise} Beats ${compchoise}`;
+        msg.innerText=`You Win...${userchoise} Beats ${compchoise}`;  //template literals //to access the variable
         msg.style.backgroundColor = "Green";
     } else {
         compscr++;
