@@ -78,7 +78,7 @@ const playgame= (userchoise) => {   //arrowfunction
 
         const userchoise= choise.getAttribute("id");
         //console.log("Choise was clicked",userchoise);
-        playgame(userchoise);
+        playgame(userchoise); //function with para
     });
     
  });
