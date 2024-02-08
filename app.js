@@ -12,7 +12,7 @@ const compscorepara=document.querySelector("#cscore");
 const drawgame = () =>{
     console.log("Game Was draw");
     msg.innerText="Game Draw...Please Try Again"; //draw game function
-}
+};
 
 
 const showwin= (userwin,userchoise,compchoise) =>{ //userwin or compwin display
@@ -26,10 +26,10 @@ const showwin= (userwin,userchoise,compchoise) =>{ //userwin or compwin display
         compscr++;
         compscorepara.innerText=compscr;
         console.log("You Lose");
-        msg.innerText=`You Lose...${compchoise} Beats ${userchoise}`;;
+        msg.innerText=`You Lose...${compchoise} Beats ${userchoise}`;
         msg.style.backgroundColor = "red";
     }
-}
+};
 
 
 const gencompchoise= () => {
@@ -38,7 +38,7 @@ const gencompchoise= () => {
     const randindx=Math.floor(Math.random() * 3); //compchoise from mathRandom()
 
     return options[randindx];
-}
+};
 
 const playgame= (userchoise) => {   //arrowfunction
     console.log("User Choise = ",userchoise);
@@ -46,7 +46,7 @@ const playgame= (userchoise) => {   //arrowfunction
     const compchoise = gencompchoise();
     console.log("computer Choise = ",compchoise);
 
-    if(userchoise === compchoise){
+    if(userchoise===compchoise){
         //draw
         drawgame();
     } else{
@@ -70,7 +70,7 @@ const playgame= (userchoise) => {   //arrowfunction
     }
     
 
-}
+};
 
  choises.forEach((choise) => {
 
